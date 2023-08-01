@@ -26,10 +26,10 @@ interface NavigationItem {
   current: boolean;
 }
 const navigation: NavigationItem[] = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Home', href: '#', current: true },
+  { name: 'Arrays', href: '#', current: false },
+  { name: 'Functions', href: '#', current: false },
+  { name: 'Variables', href: '#', current: false },
   { name: 'Exam Questions', href: '#', current: false },
 ]
 

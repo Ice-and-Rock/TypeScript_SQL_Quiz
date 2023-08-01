@@ -3,5 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.lesson-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:30em;
+    margin: 5em;
+    
+   box-shadow: 9px 9px 9px #6666;
 
+}
 

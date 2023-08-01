@@ -6,14 +6,14 @@ import Functions from "./quizes/Functions_Quiz";
 import Variables from "./quizes/Variables_Quiz";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NotFound from "./NotFound";
-import Header from "./Header";
+
 
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
+        
         <Navbar />
         <div className="content">
           <Routes>
@@ -21,7 +21,7 @@ function App() {
             <Route path="/arrays" element={<Arrays />} />
             <Route path="/functions" element={<Functions />} />
             <Route path="/variables" element={<Variables />} />
-            <Route path="" element={<NotFound />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </div>
