@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import '../src/styles/tailwind.css'
 import App from './components/App';
-import Navbar from './components/Navbar';
-import Header from './components/Header'
 
 
 const root = ReactDOM.createRoot(
@@ -12,8 +10,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Header />
-    <Navbar />
     <App />
   </React.StrictMode>
 );

@@ -1,22 +1,10 @@
 import React from "react"
-
-//  const Navbar = () => {
-
-//     return (
-//     <header>
-//         This is the Navbar
-//     </header>
-//     )
-// }
-
-// export default Navbar
-
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import '../styles/tailwind.css'
 import Nick from '../images/Nick_image.jpeg'
-import logo from '../images/V3_Logo.png'
+
 
 // Create ain interface for a user
 interface User {
@@ -51,9 +39,9 @@ interface UserNavigationItem {
   href: string;
 }
 const userNavigation: UserNavigationItem[] = [
-  { name: 'Github', href: '#' },
-  { name: 'LinkedIn', href: '#' },
-  { name: 'Contact me', href: '#' },
+  { name: 'Github', href: 'https://github.com/Ice-and-Rock' },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/nicholas-valente-electrics/' },
+  { name: 'Contact me', href: 'mailto:nicholas@valente-engineering.com' },
 ]
 
 function classNames(...classes: string[]) {
@@ -63,14 +51,7 @@ function classNames(...classes: string[]) {
 export default function Navbar() {
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full">
-        ```
-      */}
+     
       <div className="min-h-full">
         <Disclosure as="nav" className="bg-gray-800">
           {({ open }: any) => (
@@ -191,14 +172,7 @@ export default function Navbar() {
           )}
         </Disclosure>
 
-        <header className="bg-white shadow">
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
-          </div>
-        </header>
-        <main>
-          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">{/* Your content */}</div>
-        </main>
+     
       </div>
     </>
   )
