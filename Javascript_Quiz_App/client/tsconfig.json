@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    // added TailWind dependancies
+    "baseUrl": "src",
+    "paths": {
+      "@headlessui/react": ["./node_modules/@headlessui/react"],
+      "@heroicons/react/24/outline": ["./node_modules/@heroicons/react/outline"]
+    },
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src"
+  ]
+}
