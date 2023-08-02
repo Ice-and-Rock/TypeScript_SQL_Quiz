@@ -26,7 +26,10 @@ Page layout
         - links to other repos
 
 ## Functionality
-- Use ReactRouter to navigate to the different pages
+- ✅ Use ReactRouter to navigate to the different pages using Navbar
+    - routes for each page are in navigation => item.href
+- Have the user selection of the Navbar light up 'pink' for current selection
+    - useState for the nav-item clicked => handleclick function
 
 ## Server Requests
 

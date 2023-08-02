@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import '../styles/tailwind.css'
 import Nick from '../images/Nick_image.jpeg'
+import { Link } from "react-router-dom"
 
 
 // Create ain interface for a user
@@ -26,11 +27,11 @@ interface NavigationItem {
   current: boolean;
 }
 const navigation: NavigationItem[] = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Arrays', href: '#', current: false },
-  { name: 'Functions', href: '#', current: false },
-  { name: 'Variables', href: '#', current: false },
-  { name: 'Exam Questions', href: '#', current: false },
+  { name: 'Home', href: '/', current: true },
+  { name: 'Arrays', href: '/arrays', current: false },
+  { name: 'Functions', href: '/Functions', current: false },
+  { name: 'Variables', href: '/variables', current: false },
+  { name: 'Exam Questions', href: '/exam-questions', current: false },
 ]
 
 // Create an interface for the UserNavigation 
@@ -48,13 +49,24 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
+
+
 export default function Navbar() {
+const [navItems, setNavItems] = useState<NavigationItem[]>(navigation)
+
+const handleNavItemClick = (clickedItem: NavigationItem) => {
+  setNavItems ((prevNavItems) => prevNavItems.map((item) =>
+  item.name === clickedItem.name ? { ...item, current: true } : { ...item, current: false })
+  
+  )
+}
+
   return (
     <>
      
       <div className="min-h-full">
         <Disclosure as="nav" className="bg-gray-800">
-          {({ open }: any) => (
+          {({ open }) => (
             <>
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
@@ -62,20 +74,21 @@ export default function Navbar() {
                    
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
-                        {navigation.map((item) => (
-                          <a
+                        {navItems.map((item) => (
+                          <Link
                             key={item.name}
-                            href={item.href}
+                            to={item.href}
+                            onClick={() => handleNavItemClick(item)}
                             className={classNames(
                               item.current
-                                ? 'bg-gray-900 text-white'
+                                ? 'bg-pink-500 text-white'
                                 : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                               'rounded-md px-3 py-2 text-sm font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
                           >
                             {item.name}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -112,7 +125,7 @@ export default function Navbar() {
                           <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                             {userNavigation.map((item) => (
                               <Menu.Item key={item.name}>
-                                {({ active }: any) => (
+                                {({ active }) => (
                                   <a
                                     href={item.href}
                                     className={classNames(
