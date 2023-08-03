@@ -1,18 +1,17 @@
-import React, { useState } from "react"
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import '../styles/tailwind.css'
-import Nick from '../images/Nick_image.jpeg'
-import { Link } from "react-router-dom"
-
+import React, { useState } from "react";
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import "../styles/tailwind.css";
+import Nick from "../images/Nick_image.jpeg";
+import { Link } from "react-router-dom";
 
 // Create ain interface for a user
-interface User {
-  name: string;
-  email: string;
-  imageUrl: string;
-}
+// interface User {
+//   name: string;
+//   email: string;
+//   imageUrl: string;
+// }
 // const user: User = {
 //   name: 'Tom Cook',
 //   email: 'tom@example.com',
@@ -20,50 +19,53 @@ interface User {
 //     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 // }
 
-// Create an interface for the Navigation 
+// Create an interface for the Navigation
 interface NavigationItem {
   name: string;
   href: string;
   current: boolean;
 }
 const navigation: NavigationItem[] = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Arrays', href: '/arrays', current: false },
-  { name: 'Functions', href: '/Functions', current: false },
-  { name: 'Variables', href: '/variables', current: false },
-  { name: 'Exam Questions', href: '/exam-questions', current: false },
-]
+  { name: "Home", href: "/", current: true },
+  { name: "Arrays", href: "/arrays", current: false },
+  { name: "Functions", href: "/Functions", current: false },
+  { name: "Variables", href: "/variables", current: false },
+  { name: "Test Questions", href: "/test-questions", current: false },
+];
 
-// Create an interface for the UserNavigation 
+// Create an interface for the UserNavigation
 interface UserNavigationItem {
   name: string;
   href: string;
 }
 const userNavigation: UserNavigationItem[] = [
-  { name: 'Github', href: 'https://github.com/Ice-and-Rock' },
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/nicholas-valente-electrics/' },
-  { name: 'Contact me', href: 'mailto:nicholas@valente-engineering.com' },
-]
+  { name: "Github", href: "https://github.com/Ice-and-Rock" },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/nicholas-valente-electrics/",
+  },
+  { name: "Contact me", href: "mailto:nicholas@valente-engineering.com" },
+];
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
-
-
 
 export default function Navbar() {
-const [navItems, setNavItems] = useState<NavigationItem[]>(navigation)
+  const [navItems, setNavItems] = useState<NavigationItem[]>(navigation);
 
-const handleNavItemClick = (clickedItem: NavigationItem) => {
-  setNavItems ((prevNavItems) => prevNavItems.map((item) =>
-  item.name === clickedItem.name ? { ...item, current: true } : { ...item, current: false })
-  
-  )
-}
+  const handleNavItemClick = (clickedItem: NavigationItem) => {
+    setNavItems((prevNavItems) =>
+      prevNavItems.map((item) =>
+        item.name === clickedItem.name
+          ? { ...item, current: true }
+          : { ...item, current: false }
+      )
+    );
+  };
 
   return (
     <>
-     
       <div className="min-h-full">
         <Disclosure as="nav" className="bg-gray-800">
           {({ open }) => (
@@ -71,7 +73,6 @@ const handleNavItemClick = (clickedItem: NavigationItem) => {
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                   <div className="flex items-center">
-                   
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
                         {navItems.map((item) => (
@@ -81,11 +82,11 @@ const handleNavItemClick = (clickedItem: NavigationItem) => {
                             onClick={() => handleNavItemClick(item)}
                             className={classNames(
                               item.current
-                                ? 'bg-pink-500 text-white'
-                                : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                              'rounded-md px-3 py-2 text-sm font-medium'
+                                ? "bg-pink-500 text-white"
+                                : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                              "rounded-md px-3 py-2 text-sm font-medium"
                             )}
-                            aria-current={item.current ? 'page' : undefined}
+                            aria-current={item.current ? "page" : undefined}
                           >
                             {item.name}
                           </Link>
@@ -110,7 +111,11 @@ const handleNavItemClick = (clickedItem: NavigationItem) => {
                           <Menu.Button className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="absolute -inset-1.5" />
                             <span className="sr-only">Open user menu</span>
-                            <img className="h-8 w-8 rounded-full" src={Nick} alt="nick" />
+                            <img
+                              className="h-8 w-8 rounded-full"
+                              src={Nick}
+                              alt="nick"
+                            />
                           </Menu.Button>
                         </div>
                         <Transition
@@ -129,8 +134,8 @@ const handleNavItemClick = (clickedItem: NavigationItem) => {
                                   <a
                                     href={item.href}
                                     className={classNames(
-                                      active ? 'bg-gray-100' : '',
-                                      'block px-4 py-2 text-sm text-gray-700'
+                                      active ? "bg-gray-100" : "",
+                                      "block px-4 py-2 text-sm text-gray-700"
                                     )}
                                   >
                                     {item.name}
@@ -149,9 +154,15 @@ const handleNavItemClick = (clickedItem: NavigationItem) => {
                       <span className="absolute -inset-0.5" />
                       <span className="sr-only">Open main menu</span>
                       {open ? (
-                        <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                        <XMarkIcon
+                          className="block h-6 w-6"
+                          aria-hidden="true"
+                        />
                       ) : (
-                        <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                        <Bars3Icon
+                          className="block h-6 w-6"
+                          aria-hidden="true"
+                        />
                       )}
                     </Disclosure.Button>
                   </div>
@@ -159,15 +170,22 @@ const handleNavItemClick = (clickedItem: NavigationItem) => {
               </div>
 
               <Disclosure.Panel className="md:hidden bg-pink-800">
-               
                 <div className="border-t border-gray-700 pb-3 pt-4">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
-                      <img className="h-10 w-10 rounded-full" src={Nick} alt="" />
+                      <img
+                        className="h-10 w-10 rounded-full"
+                        src={Nick}
+                        alt=""
+                      />
                     </div>
                     <div className="ml-3">
-                      <div className="text-base font-medium leading-none text-white">Nick Valente</div>
-                      <div className="text-sm font-medium leading-none text-gray-400">nicholas@valente-engineering.com</div>
+                      <div className="text-base font-medium leading-none text-white">
+                        Nick Valente
+                      </div>
+                      <div className="text-sm font-medium leading-none text-gray-400">
+                        nicholas@valente-engineering.com
+                      </div>
                     </div>
                     <button
                       type="button"
@@ -184,9 +202,7 @@ const handleNavItemClick = (clickedItem: NavigationItem) => {
             </>
           )}
         </Disclosure>
-
-     
       </div>
     </>
-  )
+  );
 }
