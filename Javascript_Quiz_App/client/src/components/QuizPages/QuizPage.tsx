@@ -3,7 +3,7 @@ import variablesQuizData from "../../data/v3variables_questions";
 import arraysQuizData from "../../data/v3arrays_questions";
 import functionsQuizData from "../../data/v3functions_questions";
 import { useState } from "react";
-import { QuizQuestion } from "components/Types/types";
+
 
 import "../../index.css"
 
@@ -32,9 +32,9 @@ export default function TestPage() {
   }
 
   // Changes the quiz data and quiz name when called -------------------------
-  const changeQuizData = (quizName: string) => {
-    setQuizName(quizName);
-  };
+  // const changeQuizData = (quizName: string) => {
+  //   setQuizName(quizName);
+  // };
 
   return (
     <div className="flex items-center justify-center h-screen p-50">
