@@ -30,7 +30,7 @@ const navigation: NavigationItem[] = [
   { name: "Arrays", href: "/arrays", current: false },
   { name: "Functions", href: "/Functions", current: false },
   { name: "Variables", href: "/variables", current: false },
-  { name: "Test Questions", href: "/test-questions", current: false },
+  { name: "Quiz Questions", href: "/quiz-questions", current: false },
 ];
 
 // Create an interface for the UserNavigation
@@ -196,9 +196,10 @@ export default function Navbar() {
                       <BellIcon className="h-6 w-6" aria-hidden="true" />
                     </button>
                   </div>
-                  {/*  */}
                 </div>
+                 
               </Disclosure.Panel>
+              
             </>
           )}
         </Disclosure>

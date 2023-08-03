@@ -1,13 +1,13 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Home from "./Home";
 import Navbar from "./Navbar";
 import Arrays from "./LearnPages/Arrays_Quiz";
 import Functions from "./LearnPages/Functions_Quiz";
 import Variables from "./LearnPages/Variables_Quiz";
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NotFound from "./NotFound";
-import TestPage from "./QuizPages/TestPage";
+import QuizPage from "./QuizPages/QuizPage"
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
             <Route path="/arrays" element={<Arrays />} />
             <Route path="/functions" element={<Functions />} />
             <Route path="/variables" element={<Variables />} />
-            <Route path="/test-questions" element={<TestPage />} />
+            <Route path="/quiz-questions" element={<QuizPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

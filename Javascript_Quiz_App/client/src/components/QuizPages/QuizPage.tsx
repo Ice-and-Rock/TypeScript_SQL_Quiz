@@ -1,9 +1,12 @@
-import Quiz from "./TestQuestions";
+import Quiz from "./QuizQuestions";
 import variablesQuizData from "../../data/v3variables_questions";
 import arraysQuizData from "../../data/v3arrays_questions";
 import functionsQuizData from "../../data/v3functions_questions";
 import { useState } from "react";
 import { QuizQuestion } from "components/Types/types";
+
+import "../../index.css"
+
 
 export default function TestPage() {
   // set the quizName to a default value of 'Variables Quiz' -----------------
@@ -34,11 +37,24 @@ export default function TestPage() {
   };
 
   return (
-    <div>
+    <div className="flex items-center justify-center h-screen p-50">
       {quizName === null ? (
-        <button onClick={() => setQuizName("Arrays Quiz")}>checking!</button>
+        
+        <div className="flex flex-col">
+          <div >
+            <div className="text-center mb-10 font-bold">
+              Click one of the buttons below to test your knowledge!
+            </div>
+          </div>
+          <div>
+          <button className="quizButton" onClick={() => setQuizName("Arrays Quiz")}>Arrays Quiz!</button>
+          <button className="quizButton" onClick={() => setQuizName("Variables Quiz")}>Variables Quiz!</button>
+          <button className="quizButton" onClick={() => setQuizName("Functions Quiz")}>Functions Quiz!</button>
+          </div>
+        </div>
+       
       ) : (
-        <div className="testPage">
+        <div>
           <div>
             {quizData && <Quiz quizName={quizName} quizData={quizData} />}
           </div>

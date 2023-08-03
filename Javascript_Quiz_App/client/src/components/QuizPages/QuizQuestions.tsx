@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { QuizQuestion } from "components/Types/types";
+import "../../styles/tailwind.css";
 
 interface QuizProps {
   quizName: string;
@@ -45,6 +46,7 @@ return (
         {" "}
         You Scored {score} out of {quizData.length}
         <button
+        className="quizButton"
           onClick={() => {
             setShowScore(false);
             setScore(0);
@@ -83,6 +85,7 @@ return (
           {quizData[currentQuestion].optionText.map(
             (answerOption) => (
               <button
+              className="quizButton"
                 onClick={() =>
                   handleAnswerButtonClick(answerOption.isCorrect)
                 }
