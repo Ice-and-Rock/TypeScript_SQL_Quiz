@@ -5,7 +5,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import "../styles/tailwind.css";
 import Nick from "../images/Nick_image.jpeg";
 import { Link } from "react-router-dom";
-// import DropDownMobile from "./DropdownMobile";
+import DropDownMobile from "./DropdownMobile";
 
 // Create ain interface for a user
 // interface User {
@@ -168,7 +168,7 @@ export default function Navbar() {
                     </Disclosure.Button>
                   </div>
                 </div>
-{/* <DropDownMobile /> */}
+<DropDownMobile />
               </div>
 
 
