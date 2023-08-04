@@ -169,46 +169,11 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
-              
+
 <DropDownMobile />
 
               <Disclosure.Panel className="absolute md:hidden bg-gray-700 border-t border-gray-700">
-{/*  */}
-{/* Below renders the mobile drop down menu */}
 
-<div className="flex flex-col items-center mt-4 space-y-2">
-      <Link
-        to="/" 
-        className="text-base font-medium leading-none text-white hover:text-gray-300"
-      >
-        Home
-      </Link>
-      <Link
-        to="/arrays" 
-        className="text-base font-medium leading-none text-white hover:text-gray-300"
-      >
-        Arrays
-      </Link>
-      <Link
-        to="/functions" 
-        className="text-base font-medium leading-none text-white hover:text-gray-300"
-      >
-        Functions
-      </Link>
-      <Link
-        to="/variables" 
-        className="text-base font-medium leading-none text-white hover:text-gray-300"
-      >
-        Variables
-      </Link>
-      <Link
-        to="/quiz" 
-        className="text-base font-medium leading-none text-white hover:text-gray-300 "
-      >
-        Quiz Questions!
-      </Link>
-      
-    </div>
 
     {/*  */}
                 <div className="border-t bg-pink-700 border-gray-700 pb-3 pt-4">

@@ -28,6 +28,20 @@ Page layout
         - Contact details
         - links to other repos
 
+*Lesson learned - imperfect components*
+Drop down menu [mobile] 
+- ❌ Drop down design 1
+    - have the drop down appear with the personal details
+    - seperate into their own </div>
+        - add menu options and </Links>
+        - position ```absolute``` to render over the rest of the page
+        - design with softer edges and :hover colours
+        - FAIL
+- Drop down design 2 (Tailwind component)
+    - Create new component and add to Navbar
+    - 
+
+
 ## Functionality
 - ✅ Use ReactRouter to navigate to the different pages using Navbar
     - routes for each page are in navigation => item.href
