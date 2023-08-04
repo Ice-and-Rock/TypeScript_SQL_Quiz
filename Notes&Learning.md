@@ -45,4 +45,6 @@ Page layout
 ## Server Requests
 
 ## Netlify productions
-Run the build command to create a build folder with the compilied Typescript
+- Run the build command to create a build folder with the compilied Typescript
+- set the publish directory
+- set the base directory to the new build folder - 'build'
