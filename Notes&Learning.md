@@ -44,4 +44,5 @@ Page layout
 
 ## Server Requests
 
-
+## Netlify productions
+Run the build command to create a build folder with the compilied Typescript
