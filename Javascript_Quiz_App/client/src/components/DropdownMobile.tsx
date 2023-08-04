@@ -73,7 +73,7 @@ export default function DropDownMobile () {
             </svg>
           </div>
           <div>
-            <a href="quiz" className="font-semibold text-gray-900">
+            <a href="quiz-questions" className="font-semibold text-gray-900">
               Quiz Questions
               <span className="absolute inset-0"></span>
             </a>

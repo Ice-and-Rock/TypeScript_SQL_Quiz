@@ -168,9 +168,9 @@ export default function Navbar() {
                     </Disclosure.Button>
                   </div>
                 </div>
+{/* <DropDownMobile /> */}
               </div>
 
-<DropDownMobile />
 
               <Disclosure.Panel className="absolute md:hidden bg-gray-700 border-t border-gray-700">
 
