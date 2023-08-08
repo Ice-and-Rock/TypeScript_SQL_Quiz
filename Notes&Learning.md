@@ -58,7 +58,9 @@ Drop down menu [mobile]
             + using the <a> tags, but the ```href``` for this must be used with a "_redirects" file in the "public" folder
 - ✅ Have the user selection of the Navbar light up 'pink' for current selection
     - useState for the nav-item clicked => handleclick function
-- 
+- Create a contact me page
+    - create a privacy policy page.. just ot be silly
+    - use ```onClick={(e) => e.stopPropagation()}``` to stop the bleeding of the ```<Switch.Group/>```
 
 ## Types
 - Define the props

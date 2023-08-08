@@ -8,6 +8,8 @@ import Functions from "./LearnPages/Functions_Quiz";
 import Variables from "./LearnPages/Variables_Quiz";
 import NotFound from "./NotFound";
 import QuizPage from "./QuizPages/QuizPage"
+import ContactPage from "./ContactPage";
+import PrivacyPolicy from "./PrivacyPolicy";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path="/functions" element={<Functions />} />
             <Route path="/variables" element={<Variables />} />
             <Route path="/quiz-questions" element={<QuizPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

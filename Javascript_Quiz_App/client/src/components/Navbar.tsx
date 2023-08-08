@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import "../styles/tailwind.css";
-import Nick from "../images/Nick_image.jpeg";
+import Nick from "../images/Nick_imageV2.png";
 import { Link } from "react-router-dom";
 import DropDownMobile from "./DropdownMobile";
 
