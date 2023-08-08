@@ -52,6 +52,10 @@ Drop down menu [mobile]
 ## Functionality
 - ✅ Use ReactRouter to navigate to the different pages using Navbar
     - routes for each page are in navigation => item.href
+    - *```<Link> and <a> tags are very different!*
+        - remember in React-Router, the link tags don't call a refresh of the page
+        - from the mobile DD menu, we want the page to refresh
+            + using the <a> tags, but the ```href``` for this must be used with a "_redirects" file in the "public" folder
 - ✅ Have the user selection of the Navbar light up 'pink' for current selection
     - useState for the nav-item clicked => handleclick function
 - 
