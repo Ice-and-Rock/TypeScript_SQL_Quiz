@@ -41,6 +41,13 @@ Drop down menu [mobile]
     - Create new component and add to Navbar
     - 
 
+*Lesson learned - ```sm: md: lg:``` means 'at the break point'*
+- declare a size for a mobile screen and have it alter AFTER the breakpoint!  
+    - ```<div class="text-center sm:text-left"></div>``` will center text below ```sm:```
+
+*Lesson Learned - use ```Navigator.clipBoard.writeText``` to copy something to user's clipBoard*
+
+
 
 ## Functionality
 - ✅ Use ReactRouter to navigate to the different pages using Navbar

@@ -45,7 +45,7 @@ const userNavigation: UserNavigationItem[] = [
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/nicholas-valente-electrics/",
   },
-  { name: "Contact me", href: "mailto:nicholas@valente-engineering.com" },
+  { name: "Email", href: "mailto:nicholas@valente-engineering.com" },
 ];
 
 function classNames(...classes: string[]) {
@@ -72,7 +72,11 @@ export default function Navbar() {
           {({ open }) => (
             <>
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="flex h-16 items-center justify-between">
+                <div className="flex h-16 items-center justify-center sm:justify-between">
+<div className="md:hidden flex items-center">
+<DropDownMobile />
+</div>
+                    
                   <div className="flex items-center">
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
@@ -150,8 +154,9 @@ export default function Navbar() {
                     </div>
                   </div>
                   <div className="-mr-2 flex md:hidden">
-                    {/* Mobile menu button */}
-                    <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+
+                    {/* Mobile menu burger button */}
+                    <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="absolute -inset-0.5" />
                       <span className="sr-only">Open main menu</span>
                       {open ? (
@@ -168,7 +173,6 @@ export default function Navbar() {
                     </Disclosure.Button>
                   </div>
                 </div>
-<DropDownMobile />
               </div>
 
 
@@ -195,14 +199,31 @@ export default function Navbar() {
                         nicholas@valente-engineering.com
                       </div>
                     </div>
+                    
                     <button
                       type="button"
-                      className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                      className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-2 mx-2 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                      onClick={() => {
+                        const email = 'nicholas@valente-engineering.com';
+                        navigator.clipboard.writeText(email)
+                          .then(() => {
+                            // Clipboard successfully set
+                            console.log('Email address copied to clipboard:', email);
+                          })
+                          .catch((error) => {
+                            // Clipboard write failed
+                            console.error('Unable to copy email address:', error);
+                          });
+                      }}
                     >
                       <span className="absolute -inset-1.5" />
-                      <span className="sr-only">View notifications</span>
-                      <BellIcon className="h-6 w-6" aria-hidden="true" />
+                      <span className="sr-only">Copy email address</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
+
+                      </svg>
                     </button>
+
                   </div>
                 </div>
                  
