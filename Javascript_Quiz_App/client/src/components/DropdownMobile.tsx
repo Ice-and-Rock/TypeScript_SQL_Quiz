@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 export default function DropDownMobile () {
     const [dropDownMobileOpen, setDropDownMobileOpen] = useState(false);
@@ -33,10 +34,10 @@ export default function DropDownMobile () {
          </svg>
        </div>
        <div>
-         <a href="/arrays" className="font-semibold text-gray-900">
+         <Link to="/arrays" className="font-semibold text-gray-900">
            Arrays
            <span className="absolute inset-0"></span>
-         </a>
+         </Link>
          <p className="mt-1 text-gray-600">Explore arrays and their properties</p>
        </div>
      </div>
