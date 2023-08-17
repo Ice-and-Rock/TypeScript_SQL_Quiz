@@ -176,11 +176,12 @@ export default function Navbar() {
               </div>
 
 
-              <Disclosure.Panel className="md:hidden bg-gray-700 border-t border-gray-700">
+              <Disclosure.Panel className=" md:hidden bg-gray-700 border-t border-gray-700">
 
 
     {/*  */}
-                <div className="border-2 bg-pink-700 border-gray-700 pb-3 pt-4">
+                <div className="border-2 rounded-xl  bg-pink-700 border-gray-700 pb-3 pt-4 hover:bg-pink-600
+              hover:transition ease-out duration-500">
                   <div className="flex items-center px-5">
 
 
@@ -195,7 +196,7 @@ export default function Navbar() {
                       <div className="text-base font-medium leading-none text-white">
                         Nick Valente
                       </div>
-                      <div className="text-xs font-medium leading-none text-gray-400 sm:text-sm">
+                      <div className="text-xs font-medium leading-none text-gray-300 sm:text-sm">
                         nicholas@valente-engineering.com
                       </div>
                     </div>
