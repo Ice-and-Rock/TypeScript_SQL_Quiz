@@ -46,7 +46,8 @@ return (
         {" "}
         You Scored {score} out of {quizData.length}
         <button
-        className="quizButton"
+        className="quizButton hover:bg-pink-500
+        hover:transition ease-out duration-900"
           onClick={() => {
             setShowScore(false);
             setScore(0);
@@ -85,7 +86,8 @@ return (
           {quizData[currentQuestion].optionText.map(
             (answerOption) => (
               <button
-              className="quizButton"
+              className="quizButton hover:bg-pink-500
+              hover:transition ease-out duration-900"
                 onClick={() =>
                   handleAnswerButtonClick(answerOption.isCorrect)
                 }

@@ -29,6 +29,9 @@ Page layout
         - Contact details
         - links to other repos
 
+    - Interactions
+        - quiz buttons, once clicked, change colour and use timed delay using an isLoading state? ~1 second.
+
 *Lesson learned - imperfect components*
 Drop down menu [mobile] 
 - ❌ Drop down design 1

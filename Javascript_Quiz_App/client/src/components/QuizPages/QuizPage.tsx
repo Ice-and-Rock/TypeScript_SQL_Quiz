@@ -47,9 +47,12 @@ export default function TestPage() {
             </div>
           </div>
           <div>
-          <button className="quizButton" onClick={() => setQuizName("Arrays Quiz")}>Arrays Quiz!</button>
-          <button className="quizButton" onClick={() => setQuizName("Variables Quiz")}>Variables Quiz!</button>
-          <button className="quizButton" onClick={() => setQuizName("Functions Quiz")}>Functions Quiz!</button>
+          <button className="quizButton hover:bg-pink-500
+              hover:transition ease-out duration-900" onClick={() => setQuizName("Arrays Quiz")}>Arrays Quiz!</button>
+          <button className="quizButton hover:bg-pink-500
+              hover:transition ease-out duration-900" onClick={() => setQuizName("Variables Quiz")}>Variables Quiz!</button>
+          <button className="quizButton hover:bg-pink-500
+              hover:transition ease-out duration-900" onClick={() => setQuizName("Functions Quiz")}>Functions Quiz!</button>
           </div>
         </div>
        

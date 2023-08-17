@@ -5,6 +5,8 @@ TailWind components
 
 QuizButtons
     + TailWind buttons have thier own CSS but I want a custom CSS for my quiz, need to work out how to get around this
+    + You can add a ClassName from a CSS design and also an in-line style from Tailwind. Wow
+    + 
 
 Quiz
     + initial render is too wide and doesn't conform to mobile

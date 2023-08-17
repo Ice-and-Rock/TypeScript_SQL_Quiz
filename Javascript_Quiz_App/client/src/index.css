@@ -107,7 +107,7 @@
   }
   
   .quizButton:hover {
-    background-color: hotpink;
+    /* background-color: hotpink; */
   }
 
   .correct {
