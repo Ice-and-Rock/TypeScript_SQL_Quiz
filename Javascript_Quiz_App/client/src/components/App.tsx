@@ -17,7 +17,7 @@ function App() {
     <Router>
       <div className="flex flex-col min-h-screen">
         <Navbar />
-        <div className="flex-grow bg-gradient-to-b from-gray-300 to-white">
+        <div className="flex-grow bg-gradient-to-b from-gray-200 to-white">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/arrays" element={<Arrays />} />

@@ -87,7 +87,7 @@ export default function Navbar() {
                             onClick={() => handleNavItemClick(item)}
                             className={classNames(
                               item.current
-                                ? "bg-gradient-to-b from-pink-300 to-pink-500 text-white"
+                                ? "bg-gradient-to-b from-pink-400 to-pink-500 text-white"
                                 : "text-gray-300 hover:bg-gray-700 hover:text-white",
                               "rounded-md px-3 py-2 text-sm font-medium"
                             )}

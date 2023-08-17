@@ -21,7 +21,7 @@ export default function Footer() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 hover:bg-blue-500 hover:text-white"
+              className="h-4 w-4 hover:bg-blue-500 hover:text-white sm:h-6 sm:w-6"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -34,7 +34,7 @@ export default function Footer() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 hover:bg-red-500 hover:text-white rounded-xl"
+              className="h-5 w-5 hover:bg-red-500 hover:text-white rounded-xl sm:h-7 sm:w-7"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -56,7 +56,7 @@ export default function Footer() {
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              className="w-5 h-5 hover:bg-pink-500 hover:text-white rounded-xl"
+              className="w-5 h-5 hover:bg-pink-500 hover:text-white rounded-xl sm:h-7 sm:w-7"
             >
               <path
                 stroke-linecap="round"
@@ -70,7 +70,7 @@ export default function Footer() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 hover:bg-blue-500 hover:text-white"
+              className="h-4 w-4 hover:bg-blue-500 hover:text-white sm:h-6 sm:w-6"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -83,7 +83,7 @@ export default function Footer() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 hover:bg-green-500 hover:text-white rounded-xl"
+              className="h-4 w-4 hover:bg-green-700 hover:text-white rounded-xl sm:h-7 sm:w-7"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -93,7 +93,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-gray-800 text-xs p-2 sm:p-4 text-center text-gray-500 ">
+      <div className="bg-gradient-to-br from-gray-800 via-gray-800 to-pink-900 text-xs p-2 sm:p-4 text-center text-gray-500 ">
         © 2023. Nick Valente
       </div>
     </footer>
