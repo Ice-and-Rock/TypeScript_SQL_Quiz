@@ -37,22 +37,22 @@ export default function TestPage() {
   // };
 
   return (
-    <div className="flex items-center justify-center h-96 p-4">
+    <div className="flex items-center justify-center h-96 p-4 my-9">
       {quizName === null ? (
         
-        <div className="flex flex-col">
-          <div >
-            <div className="text-center mb-10 font-bold">
+        <div className="flex flex-col ">
+          <div className="flex items-center justify-center py-9">
+            <div className="text-center font-bold">
               Click one of the buttons below to test your knowledge!
             </div>
           </div>
           <div>
-          <button className="quizButton hover:bg-pink-500
-              hover:transition ease-out duration-900" onClick={() => setQuizName("Arrays Quiz")}>Arrays Quiz!</button>
-          <button className="quizButton hover:bg-pink-500
-              hover:transition ease-out duration-900" onClick={() => setQuizName("Variables Quiz")}>Variables Quiz!</button>
-          <button className="quizButton hover:bg-pink-500
-              hover:transition ease-out duration-900" onClick={() => setQuizName("Functions Quiz")}>Functions Quiz!</button>
+          <button className="quizButton p-4 hover:bg-pink-500
+              hover:transition ease-out duration-900 sm:mt-9" onClick={() => setQuizName("Arrays Quiz")}>Arrays Quiz!</button>
+          <button className="quizButton p-4 hover:bg-pink-500
+              hover:transition ease-out duration-900 sm:mt-9" onClick={() => setQuizName("Variables Quiz")}>Variables Quiz!</button>
+          <button className="quizButton p-4 hover:bg-pink-500
+              hover:transition ease-out duration-900 sm:mt-9" onClick={() => setQuizName("Functions Quiz")}>Functions Quiz!</button>
           </div>
         </div>
        
