@@ -13,6 +13,7 @@
 Page layout
     - ✅ 100% width
     - snow background animation 
+        - Parallax scrolling? 
     - header
         - ✅ Navbar at top
         - ✅ Topic selection on left

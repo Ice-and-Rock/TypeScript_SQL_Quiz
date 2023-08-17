@@ -10,13 +10,14 @@ import NotFound from "./NotFound";
 import QuizPage from "./QuizPages/QuizPage"
 import ContactPage from "./ContactPage";
 import PrivacyPolicy from "./PrivacyPolicy";
+import Footer from "./Footer";
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="flex flex-col min-h-screen">
         <Navbar />
-        <div className="content">
+        <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/arrays" element={<Arrays />} />
@@ -28,6 +29,8 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
+        <Footer />
+        
       </div>
     </Router>
   );
