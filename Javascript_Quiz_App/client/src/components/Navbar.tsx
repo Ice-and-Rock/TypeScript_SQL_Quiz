@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon, HeartIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon, HeartIcon } from "@heroicons/react/24/outline";
 import "../styles/tailwind.css";
 import Nick from "../images/Nick_imageV2.png";
 import { Link } from "react-router-dom";
