@@ -8,7 +8,7 @@ export default function DropDownMobile() {
   };
 
   return (
-    <div className="relative rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+    <div className="rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
       <button
         type="button"
         className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-white"

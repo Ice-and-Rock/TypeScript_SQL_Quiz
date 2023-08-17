@@ -72,7 +72,7 @@ export default function Navbar() {
           {({ open }) => (
             <>
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="flex h-16 items-center justify-center sm:justify-between">
+                <div className="flex h-16 items-center justify-center justify-between">
 <div className="md:hidden flex items-center">
 <DropDownMobile />
 </div>
@@ -176,11 +176,11 @@ export default function Navbar() {
               </div>
 
 
-              <Disclosure.Panel className="absolute md:hidden bg-gray-700 border-t border-gray-700">
+              <Disclosure.Panel className="md:hidden bg-gray-700 border-t border-gray-700">
 
 
     {/*  */}
-                <div className="border-t bg-pink-700 border-gray-700 pb-3 pt-4">
+                <div className="border-2 bg-pink-700 border-gray-700 pb-3 pt-4">
                   <div className="flex items-center px-5">
 
 
@@ -195,7 +195,7 @@ export default function Navbar() {
                       <div className="text-base font-medium leading-none text-white">
                         Nick Valente
                       </div>
-                      <div className="text-sm font-medium leading-none text-gray-400">
+                      <div className="text-xs font-medium leading-none text-gray-400 sm:text-sm">
                         nicholas@valente-engineering.com
                       </div>
                     </div>
