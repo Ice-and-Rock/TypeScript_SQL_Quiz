@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, BellIcon, XMarkIcon, HeartIcon } from "@heroicons/react/24/outline";
 import "../styles/tailwind.css";
 import Nick from "../images/Nick_imageV2.png";
 import { Link } from "react-router-dom";
@@ -87,7 +87,7 @@ export default function Navbar() {
                             onClick={() => handleNavItemClick(item)}
                             className={classNames(
                               item.current
-                                ? "bg-pink-500 text-white"
+                                ? "bg-gradient-to-b from-pink-300 to-pink-500 text-white"
                                 : "text-gray-300 hover:bg-gray-700 hover:text-white",
                               "rounded-md px-3 py-2 text-sm font-medium"
                             )}
@@ -101,13 +101,14 @@ export default function Navbar() {
                   </div>
                   <div className="hidden md:block">
                     <div className="ml-4 flex items-center md:ml-6">
+                      {/* Send some love, button */}
                       <button
                         type="button"
                         className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                       >
                         <span className="absolute -inset-1.5" />
-                        <span className="sr-only">View notifications</span>
-                        <BellIcon className="h-6 w-6" aria-hidden="true" />
+                        <span className="sr-only">Send some love!</span>
+                        <HeartIcon className="h-6 w-6"  />
                       </button>
 
                       {/* Profile dropdown */}
