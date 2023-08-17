@@ -73,7 +73,7 @@ export default function Footer() {
 
   
   <div
-    className="bg-gray-800 p-2 sm:p-4 text-center text-gray-500 ">
+    className="bg-gray-800 text-xs p-2 sm:p-4 text-center text-gray-500 ">
     © 2023. Nick Valente
     
   </div>

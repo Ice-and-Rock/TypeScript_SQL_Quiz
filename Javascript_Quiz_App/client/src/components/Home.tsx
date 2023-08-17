@@ -4,7 +4,7 @@ import Logo from "../images/V3_Logo.png";
 export default function Home() {
   return (
     <div className="homePage">
-      <header className="bg-white m-8 sm:p-8 shadow mx-8">
+      <header className="bg-white m-8 sm:p-8 shadow mx-8 rounded-xl">
         <div className="flex items-center justify-center ">
           <img className="" src={Logo} alt="logo" />
         </div>
