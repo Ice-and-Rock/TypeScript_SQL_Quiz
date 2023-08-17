@@ -51,6 +51,9 @@ Drop down menu [mobile]
 
 *Lesson Learned - use ```Navigator.clipBoard.writeText``` to copy something to user's clipBoard*
 
+*Lesson Learned - using a CSS class and inline TailWind Style*
+- doesnt work for ```gradient-color``` because CSS file uses ```gradient-image``` for this
+
 
 
 ## Functionality

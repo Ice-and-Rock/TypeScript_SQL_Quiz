@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="flex justify-center">
           <a
             href="https://www.facebook.com/profile.php?id=847380014"
-            className="mr-9 text-white "
+            className="mr-9 text-neutral-800 dark:text-neutral-200"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
