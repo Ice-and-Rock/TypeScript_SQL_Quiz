@@ -14,7 +14,7 @@ export default function Home() {
           </h1>
           <h3 className="p-3 text-center">Feel free to choose a topic above and test yourself.</h3>
           <span></span>
-          <h4 className="pt-9">for Mobile & Desktop.</h4>
+          <h4 className="pt-9">for Mobile, tablet & Desktop.</h4>
         </div>
       </header>
     </div>
